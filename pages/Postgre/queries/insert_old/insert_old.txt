@@ -1,0 +1,2 @@
+INSERT INTO public."accounts" ("username", "password", "email", "created_on", "phone")
+  VALUES ('', '', '', TIMESTAMP '2019-07-01 10:00:00',  Array['123456789']);

@@ -1,0 +1,8 @@
+UPDATE PUBLIC.BBB SET
+    LAST_LOGIN = '2021-01-01 00:00:01',
+    ADDRESS = '',
+    SALARY = 1.0,
+    ID = 1,
+    NAME = '',
+    AGE = 1
+  WHERE 1 = 0; -- Specify a valid condition here. Removing the condition may update every row in the table!

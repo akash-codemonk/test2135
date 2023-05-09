@@ -1,0 +1,265 @@
+{
+  "unpublishedPage": {
+    "name": "Prapulla_Page",
+    "slug": "prapulla-page",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 816,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 730,
+          "containerStyle": "none",
+          "snapRows": 73,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 69,
+          "minHeight": 740,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "Table1",
+              "defaultPageSize": 0,
+              "columnOrder": [
+                "id",
+                "email",
+                "first_name",
+                "last_name",
+                "avatar"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "displayName": "Table",
+              "iconSVG": "/static/media/icon.db8a9cbd.svg",
+              "topRow": 1,
+              "bottomRow": 29,
+              "isSortable": true,
+              "parentRowSpace": 10,
+              "type": "TABLE_WIDGET",
+              "defaultSelectedRow": "0",
+              "hideCard": false,
+              "animateLoading": true,
+              "dynamicTriggerPathList": [],
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.email.computedValue"
+                },
+                {
+                  "key": "primaryColumns.first_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.last_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.avatar.computedValue"
+                },
+                {
+                  "key": "accentColor"
+                }
+              ],
+              "leftColumn": 0,
+              "primaryColumns": {
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "email": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "email",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "email",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.email))}}",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "first_name": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "first_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "first_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.first_name))}}",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "last_name": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "last_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "last_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.last_name))}}",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                },
+                "avatar": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "avatar",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "avatar",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.avatar))}}",
+                  "borderRadius": "0px",
+                  "boxShadow": "none"
+                }
+              },
+              "delimiter": ",",
+              "key": "29vfpak1v9",
+              "derivedColumns": {},
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "textSize": "0.875rem",
+              "widgetId": "jn9kxlul8n",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisibleFilters": true,
+              "tableData": "{{Api2.data.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "enableClientSideSearch": true,
+              "version": 3,
+              "totalRecordsCount": 0,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "childStylesheet": {
+                "button": {
+                  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "menuButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                },
+                "iconButton": {
+                  "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                  "boxShadow": "none"
+                }
+              },
+              "borderRadius": "0px",
+              "isVisiblePagination": true,
+              "verticalAlignment": "CENTER",
+              "columnSizeMap": {
+                "task": 245,
+                "step": 62,
+                "status": 75
+              }
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "AudioRecorder1",
+              "displayName": "Audio Recorder",
+              "iconSVG": "/static/media/icon.3cb03cd8.svg",
+              "topRow": 33,
+              "bottomRow": 41,
+              "parentRowSpace": 10,
+              "type": "AUDIO_RECORDER_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.5625,
+              "leftColumn": 4,
+              "isDisabled": false,
+              "key": "i80y4itnfh",
+              "labelTextSize": "0.875rem",
+              "backgroundColor": "#F86A2B",
+              "rightColumn": 20,
+              "widgetId": "7d1dmeuuwj",
+              "accentColor": "#F86A2B",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "9999px",
+              "iconColor": "white"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Prapulla_Page",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "6458e7a8dd41634932a07b60_6458e7a8dd41634932a07b8e"
+}

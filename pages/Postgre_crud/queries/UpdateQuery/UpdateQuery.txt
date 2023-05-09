@@ -1,0 +1,6 @@
+UPDATE public."accounts" SET
+		"username" = '{{update_col_2.text}}',
+    "password" = '{{update_col_3.text}}',
+    "email" = '{{update_col_4.text}}',
+    "created_on" = '{{update_col_5.text}}'
+  WHERE "user_id" = {{Table1.selectedRow.user_id}};

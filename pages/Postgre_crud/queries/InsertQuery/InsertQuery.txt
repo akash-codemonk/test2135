@@ -1,0 +1,12 @@
+INSERT INTO public."accounts" (
+	"username", 
+	"password",
+	"email", 
+	"created_on"
+)
+VALUES (
+				{{insert_col_input2.text}}, 
+				{{insert_col_input3.text}}, 
+				{{insert_col_input4.text}}, 
+				{{insert_col_input5.text}}
+);

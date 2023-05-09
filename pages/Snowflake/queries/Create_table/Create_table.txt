@@ -1,0 +1,13 @@
+CREATE TABLE jan31 (
+	user_id int PRIMARY KEY,
+	username VARCHAR ( 50 ) UNIQUE NOT NULL,
+	password VARCHAR ( 50 ) NOT NULL,
+	email VARCHAR ( 255 ) UNIQUE NOT NULL,
+	created_on TIMESTAMP NOT NULL,
+  Phone int ,
+	usernickname VARCHAR ( 50 ),
+	userhomeaddress VARCHAR ( 50 ),
+	usefavoritecolor VARCHAR ( 50 ),
+	userfavoritenumber VARCHAR ( 50 ),
+	userrank VARCHAR ( 50 )
+);

@@ -1,0 +1,88 @@
+{
+  "pages": [
+    {
+      "id": "Postgre",
+      "isDefault": false
+    },
+    {
+      "id": "Page2",
+      "isDefault": false
+    },
+    {
+      "id": "Postgre_crud",
+      "isDefault": false
+    },
+    {
+      "id": "Snowflake_crud",
+      "isDefault": false
+    },
+    {
+      "id": "Mysql",
+      "isDefault": true
+    },
+    {
+      "id": "testthename",
+      "isDefault": false
+    },
+    {
+      "id": "Mongo",
+      "isDefault": false
+    },
+    {
+      "id": "Mongo_raw",
+      "isDefault": false
+    },
+    {
+      "id": "Snowflake",
+      "isDefault": false
+    },
+    {
+      "id": "CRUD_MYSQL",
+      "isDefault": false
+    },
+    {
+      "id": "SMTP",
+      "isDefault": false
+    },
+    {
+      "id": "Issuepage",
+      "isDefault": false
+    },
+    {
+      "id": "Assets-test.appsmith.com",
+      "isDefault": false
+    },
+    {
+      "id": "Page3",
+      "isDefault": false
+    },
+    {
+      "id": "Prapulla_Page",
+      "isDefault": false
+    },
+    {
+      "id": "Assets-test.appsmith.com Copy Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Application",
+      "isDefault": false
+    },
+    {
+      "id": "Public.cars",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "clonedFromApplicationId": "61f76b7b12bf99332041ed27",
+  "color": "#FFEFDB",
+  "icon": "help",
+  "unpublishedCustomJSLibs": [],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "isManualUpdate": false,
+  "deleted": false
+}

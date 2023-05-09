@@ -1,0 +1,6 @@
+UPDATE public."migrate" SET
+		"address" = '{{update_col_2.text}}',
+    "name" = '{{update_col_3.text}}',
+    "age" = '{{update_col_4.text}}',
+    "dob" = '{{update_col_5.text}}'
+  WHERE "id" = {{Table1.selectedRow.id}};

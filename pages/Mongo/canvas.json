@@ -1,0 +1,173 @@
+{
+  "unpublishedPage": {
+    "name": "Mongo",
+    "slug": "mongo",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 816,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 700,
+          "containerStyle": "none",
+          "snapRows": 70,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 69,
+          "minHeight": 710,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "Chart1",
+              "allowScroll": false,
+              "displayName": "Chart",
+              "iconSVG": "/static/media/icon.6adbe31e.svg",
+              "topRow": 1,
+              "bottomRow": 33,
+              "parentRowSpace": 10,
+              "type": "CHART_WIDGET",
+              "hideCard": false,
+              "chartData": {
+                "jd4sbl9r86": {
+                  "seriesName": "Sales",
+                  "data": "{{Agg.data.map( (obj) =>{ return  {'x': obj.Status, 'y': obj.Amount } })}}"
+                }
+              },
+              "animateLoading": true,
+              "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.jd4sbl9r86.data"
+                },
+                {
+                  "key": "accentColor"
+                },
+                {
+                  "key": "fontFamily"
+                }
+              ],
+              "leftColumn": 0,
+              "customFusionChartConfig": {
+                "type": "column2d",
+                "dataSource": {
+                  "chart": {
+                    "caption": "Sales Report",
+                    "xAxisName": "Product Line",
+                    "yAxisName": "Revenue($)",
+                    "theme": "fusion"
+                  },
+                  "data": [
+                    {
+                      "label": "Product1",
+                      "value": 20000
+                    },
+                    {
+                      "label": "Product2",
+                      "value": 22000
+                    },
+                    {
+                      "label": "Product3",
+                      "value": 32000
+                    }
+                  ]
+                }
+              },
+              "key": "s33s52np1o",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 24,
+              "widgetId": "2olpo68e1y",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "labelOrientation": "auto",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "yAxisName": "Revenue($)",
+              "chartName": "Sales Report",
+              "borderRadius": "0px",
+              "xAxisName": "Product Line",
+              "chartType": "COLUMN_CHART"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Select1",
+              "isFilterable": false,
+              "displayName": "Select",
+              "iconSVG": "/static/media/icon.bd99caba.svg",
+              "labelText": "Label",
+              "topRow": 34,
+              "bottomRow": 41,
+              "parentRowSpace": 10,
+              "type": "DROP_DOWN_WIDGET",
+              "serverSideFiltering": false,
+              "hideCard": false,
+              "defaultOptionValue": "{{Select1.options[0].value}}",
+              "selectionType": "SINGLE_SELECT",
+              "animateLoading": true,
+              "dynamicBindingPathList": [
+                {
+                  "key": "options"
+                },
+                {
+                  "key": "defaultOptionValue"
+                },
+                {
+                  "key": "accentColor"
+                }
+              ],
+              "leftColumn": 0,
+              "options": "{{Agg.data.map( (obj) =>{ return  {'label': obj.Status, 'value': obj.Status } })}}",
+              "placeholderText": "Select option",
+              "isDisabled": false,
+              "key": "srbwlgu5rc",
+              "labelTextSize": "0.875rem",
+              "isRequired": false,
+              "rightColumn": 20,
+              "widgetId": "ajwisxml4b",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0px"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Mongo_Agg",
+              "name": "Agg",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Mongo",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "6458e7a8dd41634932a07b60_6458e7a8dd41634932a07b78"
+}

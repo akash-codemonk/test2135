@@ -1,0 +1,4 @@
+{{Chart1.xAxisName}}
+{{DatePicker1.selectedDate}}
+{{Input1.text}}
+{{MultiSelect1.selectedOptionValues}}

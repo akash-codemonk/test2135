@@ -1,0 +1,9 @@
+UPDATE public."cars" SET
+		"model" = '{{update_form.fieldState.model.isVisible ? update_form.formData.model : update_form.sourceData.model}}',
+		"make" = '{{update_form.fieldState.make.isVisible ? update_form.formData.make : update_form.sourceData.make}}',
+    "year" = '{{update_form.fieldState.year.isVisible ? update_form.formData.year : update_form.sourceData.year}}',
+		"interval" = '{{update_form.fieldState.interval.isVisible ? update_form.formData.interval : update_form.sourceData.interval}}',
+		"last_service_date" = '{{update_form.fieldState.last_service_date.isVisible ? update_form.formData.last_service_date : update_form.sourceData.last_service_date}}',
+		"last_service_notes" = '{{update_form.fieldState.last_service_notes.isVisible ? update_form.formData.last_service_notes : update_form.sourceData.last_service_notes}}',
+		"next_service_due" = '{{update_form.fieldState.next_service_due.isVisible ? update_form.formData.next_service_due : update_form.sourceData.next_service_due}}'
+WHERE "vin" = {{data_table.selectedRow.vin}};

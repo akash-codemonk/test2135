@@ -1,0 +1,4 @@
+INSERT INTO jan31 (
+   user_id ,username,password,email,created_on,Phone,usernickname,userhomeaddress ,usefavoritecolor,userfavoritenumber,userrank)
+VALUES (7, 'Shetty', 'Test@123', 'Test@gmail.com','2007-12-13',1234567890,'ss','davangere','blue',10,19),
+ (8, 'Teddy', 'teddy@123', 'Teddy@gmail.com','2007-12-12',0987654321 ,'td','banglore','black',1,12);

@@ -1,0 +1,2 @@
+DELETE FROM PUBLIC.BBB
+  WHERE ID = {{Table1.triggeredRow.ID}};

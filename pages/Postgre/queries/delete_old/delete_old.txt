@@ -1,0 +1,2 @@
+DELETE FROM accounts
+  WHERE username = 'ram'; -- Specify a valid condition here. Removing the condition may delete everything in the table!

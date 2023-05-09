@@ -1,0 +1,2 @@
+INSERT INTO CC (Name, rating, ceoname, age)
+  VALUES ('raksha', 1, 'xxx', 1);

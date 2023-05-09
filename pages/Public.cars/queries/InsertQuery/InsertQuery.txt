@@ -1,0 +1,18 @@
+INSERT INTO public."cars" (
+	"vin",
+	"model",
+	"make",
+	"year",
+	"interval",
+	"last_service_date",
+	"last_service_notes",
+	"next_service_due")
+VALUES (
+	'{{insert_form.formData.vin}}',
+	'{{insert_form.formData.model}}',
+	'{{insert_form.formData.make}}',
+	'{{insert_form.formData.year}}',
+	'{{insert_form.formData.interval}}',
+	'{{insert_form.formData.last_service_date}}',
+	'{{insert_form.formData.last_service_notes}}',
+	'{{insert_form.formData.next_service_due}}');

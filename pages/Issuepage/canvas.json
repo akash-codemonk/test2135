@@ -1,0 +1,1695 @@
+{
+  "unpublishedPage": {
+    "name": "Issuepage",
+    "slug": "issuepage",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 816,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 940,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 64,
+          "minHeight": 710,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "backgroundColor": "#FFFFFF",
+              "widgetName": "Container1",
+              "rightColumn": 40,
+              "widgetId": "mvubsemxfo",
+              "containerStyle": "card",
+              "topRow": 0,
+              "bottomRow": 87,
+              "parentRowSpace": 10,
+              "isVisible": "true",
+              "type": "CONTAINER_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 19.75,
+              "leftColumn": 0,
+              "borderRadius": "0px",
+              "children": [
+                {
+                  "labelTextSize": "0.875rem",
+                  "boxShadow": "none",
+                  "widgetName": "Canvas1",
+                  "rightColumn": 632,
+                  "detachFromLayout": true,
+                  "widgetId": "59rw5mx0bq",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 880,
+                  "parentRowSpace": 1,
+                  "isVisible": "true",
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "mvubsemxfo",
+                  "minHeight": 870,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "borderRadius": "0px",
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Table1",
+                      "columnOrder": [
+                        "id",
+                        "name",
+                        "gender",
+                        "email",
+                        "colors",
+                        "customColumn1"
+                      ],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onPageChange"
+                        }
+                      ],
+                      "isVisibleDownload": true,
+                      "topRow": 10,
+                      "bottomRow": 86,
+                      "parentRowSpace": 10,
+                      "onPageChange": "{{SelectQuery.run()}}",
+                      "isSortable": true,
+                      "type": "TABLE_WIDGET",
+                      "defaultSelectedRow": "0",
+                      "parentColumnSpace": 1,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onPageChange"
+                        },
+                        {
+                          "key": "primaryColumns.customColumn1.onClick"
+                        },
+                        {
+                          "key": "onSearchTextChanged"
+                        }
+                      ],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "primaryColumns.customColumn1.buttonLabel"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.name.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.gender.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.email.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.colors.computedValue"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "leftColumn": 0,
+                      "primaryColumns": {
+                        "customColumn1": {
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.customColumn1))}}",
+                          "onClick": "{{showModal('Delete_Modal')}}",
+                          "textSize": "0.875rem",
+                          "buttonColor": "#DD4B34",
+                          "index": 7,
+                          "isVisible": true,
+                          "label": "customColumn1",
+                          "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => { return 'Delete'})}}",
+                          "columnType": "button",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "customColumn1",
+                          "isDisabled": false,
+                          "buttonLabelColor": "#FFFFFF",
+                          "verticalAlignment": "CENTER",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "id": {
+                          "index": 0,
+                          "width": 150,
+                          "id": "id",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "id",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "name": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "name",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "name",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "gender": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "gender",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "gender",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.gender))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "email": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "email",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "email",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.email))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "colors": {
+                          "index": 4,
+                          "width": 150,
+                          "id": "colors",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "colors",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.colors))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "delimiter": ",",
+                      "derivedColumns": {
+                        "customColumn1": {
+                          "isDerived": true,
+                          "computedValue": "",
+                          "onClick": "{{DeleteQuery.run()}}",
+                          "textSize": "0.875rem",
+                          "buttonStyle": "#DD4B34",
+                          "index": 7,
+                          "isVisible": true,
+                          "label": "customColumn1",
+                          "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => { return 'Delete'})}}",
+                          "columnType": "button",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "customColumn1",
+                          "buttonLabelColor": "#FFFFFF",
+                          "verticalAlignment": "CENTER",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "textSize": "0.875rem",
+                      "widgetId": "jabdu9f16g",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": true,
+                      "tableData": "{{SelectQuery.data}}",
+                      "isVisible": "true",
+                      "label": "Data",
+                      "searchKey": "",
+                      "version": 3,
+                      "parentId": "59rw5mx0bq",
+                      "serverSidePaginationEnabled": true,
+                      "isLoading": false,
+                      "isVisibleCompactMode": true,
+                      "onSearchTextChanged": "{{SelectQuery.run()}}",
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "borderRadius": "0px",
+                      "isVisiblePagination": true,
+                      "verticalAlignment": "CENTER",
+                      "columnSizeMap": {
+                        "task": 245,
+                        "deliveryAddress": 170,
+                        "step": 62,
+                        "id": 228,
+                        "status": 75
+                      }
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "col_select",
+                      "isFilterable": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "topRow": 5,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "type": "DROP_DOWN_WIDGET",
+                      "defaultOptionValue": "id",
+                      "parentColumnSpace": 18.8828125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
+                      "leftColumn": 7,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isVisible"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "options": "[\n{\n\t\"label\": \"email\",\n\t\"value\": \"email\"\n}, \n{\n\t\"label\": \"colors\",\n\t\"value\": \"colors\"\n}, \n{\n\t\"label\": \"name\",\n\t\"value\": \"name\"\n}, \n{\n\t\"label\": \"gender\",\n\t\"value\": \"gender\"\n}, \n{\n\t\"label\": \"id\",\n\t\"value\": \"id\"\n}]",
+                      "isDisabled": false,
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "rightColumn": 22,
+                      "widgetId": "asmgosgxjm",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": "{{SelectQuery.data.length > 0}}",
+                      "label": "",
+                      "version": 1,
+                      "parentId": "59rw5mx0bq",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "onOptionChange": "{{SelectQuery.run()}}"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text15",
+                      "topRow": 5,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 19.75,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "text": "Order By :",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 7,
+                      "textAlign": "LEFT",
+                      "widgetId": "l8pgl90klz",
+                      "isVisible": "true",
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "59rw5mx0bq",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "order_select",
+                      "isFilterable": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "topRow": 5,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "type": "DROP_DOWN_WIDGET",
+                      "defaultOptionValue": "ASC",
+                      "parentColumnSpace": 19.75,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
+                      "leftColumn": 22,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isVisible"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "options": "[\n  {\n    \"label\": \"Ascending\",\n    \"value\": \"ASC\"\n  },\n  {\n    \"label\": \"Descending\",\n    \"value\": \"DESC\"\n  }\n]",
+                      "isDisabled": false,
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "rightColumn": 37,
+                      "widgetId": "10v8a19m25",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": "{{SelectQuery.data.length > 0}}",
+                      "label": "",
+                      "version": 1,
+                      "parentId": "59rw5mx0bq",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "onOptionChange": "{{SelectQuery.run()}}"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text16",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 11.78515625,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "text": "public_chandan_user Data",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "textAlign": "LEFT",
+                      "widgetId": "urzv99hdc8",
+                      "isVisible": "true",
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "59rw5mx0bq",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "refresh_btn",
+                      "onClick": "{{SelectQuery.run()}}",
+                      "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "topRow": 5,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "parentColumnSpace": 12.0703125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 60,
+                      "dynamicBindingPathList": [],
+                      "isDisabled": false,
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "iconName": "refresh",
+                      "widgetId": "xp5u9a9nzq",
+                      "isVisible": "true",
+                      "version": 1,
+                      "parentId": "59rw5mx0bq",
+                      "isLoading": false,
+                      "borderRadius": "9999px",
+                      "buttonVariant": "TERTIARY"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "add_btn",
+                      "onClick": "{{showModal('Insert_Modal')}}",
+                      "buttonColor": "#03B365",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "topRow": 5,
+                      "bottomRow": 9,
+                      "parentRowSpace": 10,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "parentColumnSpace": 12.0703125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [],
+                      "isDisabled": false,
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 60,
+                      "iconName": "add",
+                      "widgetId": "nh3cu4lb1g",
+                      "isVisible": "true",
+                      "version": 1,
+                      "parentId": "59rw5mx0bq",
+                      "isLoading": false,
+                      "borderRadius": "9999px",
+                      "buttonVariant": "TERTIARY"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Delete_Modal",
+              "topRow": 13,
+              "bottomRow": 37,
+              "parentRowSpace": 10,
+              "type": "MODAL_WIDGET",
+              "shouldScrollContents": false,
+              "parentColumnSpace": 18.8828125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 21,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas3",
+                  "topRow": 0,
+                  "bottomRow": 230,
+                  "parentRowSpace": 1,
+                  "canExtend": true,
+                  "type": "CANVAS_WIDGET",
+                  "shouldScrollContents": false,
+                  "minHeight": 240,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Alert_text",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "type": "TEXT_WIDGET",
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "text": "Delete Row",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 41,
+                      "textAlign": "LEFT",
+                      "widgetId": "35yoxo4oec",
+                      "isVisible": "true",
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "zi8fjakv8o",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Button1",
+                      "onClick": "{{closeModal('Delete_Modal')}}",
+                      "dynamicPropertyPathList": [],
+                      "buttonColor": "#03B365",
+                      "topRow": 17,
+                      "bottomRow": 21,
+                      "type": "BUTTON_WIDGET",
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 34,
+                      "dynamicBindingPathList": [],
+                      "text": "Cancel",
+                      "isDisabled": false,
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 46,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "lryg8kw537",
+                      "isVisible": "true",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "zi8fjakv8o",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "buttonVariant": "PRIMARY"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Delete_Button",
+                      "onClick": "{{DeleteQuery.run(() => SelectQuery.run(() => closeModal('Delete_Modal')), () => {})}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "buttonColor": "#F22B2B",
+                      "topRow": 17,
+                      "bottomRow": 21,
+                      "type": "BUTTON_WIDGET",
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 48,
+                      "dynamicBindingPathList": [],
+                      "text": "Confirm",
+                      "isDisabled": false,
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "qq02lh7ust",
+                      "isVisible": "true",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "zi8fjakv8o",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "buttonVariant": "PRIMARY"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text12",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 6.875,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "text": "Are you sure you want to delete this item?",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 63,
+                      "textAlign": "LEFT",
+                      "widgetId": "48uac29g6e",
+                      "isVisible": "true",
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "zi8fjakv8o",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
+                    }
+                  ],
+                  "isDisabled": false,
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 453.1875,
+                  "detachFromLayout": true,
+                  "widgetId": "zi8fjakv8o",
+                  "isVisible": "true",
+                  "version": 1,
+                  "parentId": "i3whp03wf0",
+                  "isLoading": false,
+                  "borderRadius": "0px"
+                }
+              ],
+              "height": 240,
+              "labelTextSize": "0.875rem",
+              "rightColumn": 45,
+              "detachFromLayout": true,
+              "widgetId": "i3whp03wf0",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "width": 456
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Insert_Modal",
+              "topRow": 16,
+              "bottomRow": 40,
+              "parentRowSpace": 10,
+              "type": "MODAL_WIDGET",
+              "shouldScrollContents": false,
+              "parentColumnSpace": 18.8828125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 17,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas4",
+                  "topRow": 0,
+                  "bottomRow": 610,
+                  "parentRowSpace": 1,
+                  "canExtend": true,
+                  "type": "CANVAS_WIDGET",
+                  "shouldScrollContents": false,
+                  "minHeight": 604,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "labelTextSize": "0.875rem",
+                      "boxShadow": "none",
+                      "widgetName": "Form2",
+                      "backgroundColor": "#F6F7F8",
+                      "rightColumn": 64,
+                      "widgetId": "1ruewbc4ef",
+                      "topRow": 0,
+                      "bottomRow": 59,
+                      "parentRowSpace": 10,
+                      "isVisible": "true",
+                      "type": "FORM_WIDGET",
+                      "parentId": "9rhv3ioohq",
+                      "isLoading": false,
+                      "shouldScrollContents": false,
+                      "parentColumnSpace": 8,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "borderRadius": "0px",
+                      "children": [
+                        {
+                          "labelTextSize": "0.875rem",
+                          "boxShadow": "none",
+                          "widgetName": "Canvas5",
+                          "rightColumn": 224,
+                          "detachFromLayout": true,
+                          "widgetId": "tp9pui0e6y",
+                          "containerStyle": "none",
+                          "topRow": 0,
+                          "bottomRow": 570,
+                          "parentRowSpace": 1,
+                          "isVisible": "true",
+                          "canExtend": false,
+                          "type": "CANVAS_WIDGET",
+                          "version": 1,
+                          "parentId": "1ruewbc4ef",
+                          "minHeight": 580,
+                          "isLoading": false,
+                          "parentColumnSpace": 1,
+                          "dynamicTriggerPathList": [],
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [],
+                          "borderRadius": "0px",
+                          "children": [
+                            {
+                              "resetFormOnClick": true,
+                              "boxShadow": "none",
+                              "widgetName": "insert_button",
+                              "onClick": "{{InsertQuery.run(() => SelectQuery.run(() => closeModal('Insert_Modal')))}}",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
+                              "buttonColor": "#03B365",
+                              "topRow": 51,
+                              "bottomRow": 55,
+                              "type": "FORM_BUTTON_WIDGET",
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
+                              "leftColumn": 43,
+                              "dynamicBindingPathList": [],
+                              "googleRecaptchaKey": "",
+                              "text": "Submit",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 62,
+                              "isDefaultClickDisabled": true,
+                              "widgetId": "h8vxf3oh4s",
+                              "isVisible": "true",
+                              "version": 1,
+                              "recaptchaType": "V3",
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "disabledWhenInvalid": true,
+                              "borderRadius": "0px",
+                              "buttonVariant": "PRIMARY"
+                            },
+                            {
+                              "resetFormOnClick": true,
+                              "boxShadow": "none",
+                              "widgetName": "reset_button",
+                              "onClick": "{{closeModal('Insert_Modal')}}",
+                              "buttonColor": "#03B365",
+                              "topRow": 51,
+                              "bottomRow": 55,
+                              "type": "FORM_BUTTON_WIDGET",
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
+                              "leftColumn": 29,
+                              "dynamicBindingPathList": [],
+                              "text": "Close",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 42,
+                              "isDefaultClickDisabled": true,
+                              "widgetId": "o23gs26wm5",
+                              "isVisible": "true",
+                              "version": 1,
+                              "recaptchaType": "V3",
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "disabledWhenInvalid": false,
+                              "borderRadius": "0px",
+                              "buttonVariant": "SECONDARY"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Text21",
+                              "topRow": 5,
+                              "bottomRow": 9,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "parentColumnSpace": 7.6865234375,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 3,
+                              "dynamicBindingPathList": [],
+                              "text": "id:",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 19,
+                              "textAlign": "RIGHT",
+                              "widgetId": "cfmxebyn06",
+                              "isVisible": "true",
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "insert_col_input1",
+                              "topRow": 5,
+                              "bottomRow": 9,
+                              "parentRowSpace": 10,
+                              "type": "INPUT_WIDGET",
+                              "parentColumnSpace": 7.6865234375,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 21,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "inputType": "TEXT",
+                              "placeholderText": "Autogenerated Field",
+                              "isDisabled": true,
+                              "validation": "true",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 62,
+                              "widgetId": "h1wbbv7alb",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": "true",
+                              "label": "",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "defaultText": ""
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Text22",
+                              "topRow": 12,
+                              "bottomRow": 16,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "parentColumnSpace": 7.6865234375,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 2,
+                              "dynamicBindingPathList": [],
+                              "text": "name:",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 19,
+                              "textAlign": "RIGHT",
+                              "widgetId": "jsffaxrqhw",
+                              "isVisible": "true",
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "insert_col_input2",
+                              "topRow": 12,
+                              "bottomRow": 16,
+                              "parentRowSpace": 10,
+                              "type": "INPUT_WIDGET",
+                              "parentColumnSpace": 8.0625,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 21,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "inputType": "TEXT",
+                              "placeholderText": "name",
+                              "isDisabled": false,
+                              "validation": "true",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "rightColumn": 62,
+                              "widgetId": "6enalyprua",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": "true",
+                              "label": "",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "defaultText": ""
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Text23",
+                              "topRow": 19,
+                              "bottomRow": 23,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "parentColumnSpace": 7.6865234375,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 3,
+                              "dynamicBindingPathList": [],
+                              "text": "gender:",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 19,
+                              "textAlign": "RIGHT",
+                              "widgetId": "btk60uozsm",
+                              "isVisible": "true",
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "insert_col_input3",
+                              "topRow": 19,
+                              "bottomRow": 23,
+                              "parentRowSpace": 10,
+                              "type": "INPUT_WIDGET",
+                              "parentColumnSpace": 8.0625,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 21,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "inputType": "TEXT",
+                              "placeholderText": "gender",
+                              "isDisabled": false,
+                              "validation": "true",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "rightColumn": 62,
+                              "widgetId": "e490gfts69",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": "true",
+                              "label": "",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "defaultText": ""
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Text14",
+                              "topRow": 26,
+                              "bottomRow": 30,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "parentColumnSpace": 8.0625,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 3,
+                              "dynamicBindingPathList": [],
+                              "text": "email:",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 19,
+                              "textAlign": "RIGHT",
+                              "widgetId": "8fm60omwwv",
+                              "isVisible": "true",
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "insert_col_input4",
+                              "topRow": 26,
+                              "bottomRow": 30,
+                              "parentRowSpace": 10,
+                              "type": "INPUT_WIDGET",
+                              "parentColumnSpace": 8.0625,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 21,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "inputType": "TEXT",
+                              "placeholderText": "email",
+                              "isDisabled": false,
+                              "validation": "true",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "rightColumn": 62,
+                              "widgetId": "r55cydp0ao",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": "true",
+                              "label": "",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "defaultText": ""
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Text24",
+                              "topRow": 33,
+                              "bottomRow": 37,
+                              "parentRowSpace": 10,
+                              "type": "TEXT_WIDGET",
+                              "parentColumnSpace": 7.6865234375,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 3,
+                              "dynamicBindingPathList": [],
+                              "text": "colors:",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 19,
+                              "textAlign": "RIGHT",
+                              "widgetId": "9t3vdjd5xj",
+                              "isVisible": "true",
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "0.875rem"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "insert_col_input5",
+                              "topRow": 33,
+                              "bottomRow": 37,
+                              "parentRowSpace": 10,
+                              "type": "INPUT_WIDGET",
+                              "parentColumnSpace": 8.0625,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 21,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "inputType": "TEXT",
+                              "placeholderText": "colors",
+                              "isDisabled": false,
+                              "validation": "true",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "rightColumn": 62,
+                              "widgetId": "5rfqxgj0vm",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": "true",
+                              "label": "",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "defaultText": ""
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Text13Copy",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
+                              "topRow": 0,
+                              "bottomRow": 4,
+                              "type": "TEXT_WIDGET",
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 0,
+                              "dynamicBindingPathList": [],
+                              "text": "Insert Row",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 35,
+                              "textAlign": "LEFT",
+                              "widgetId": "18x7vdv3gs",
+                              "isVisible": "true",
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "tp9pui0e6y",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "1.5rem"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "isDisabled": false,
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 453.1875,
+                  "detachFromLayout": true,
+                  "widgetId": "9rhv3ioohq",
+                  "isVisible": "true",
+                  "version": 1,
+                  "parentId": "vmorzie6eq",
+                  "isLoading": false,
+                  "borderRadius": "0px"
+                }
+              ],
+              "height": 604,
+              "labelTextSize": "0.875rem",
+              "rightColumn": 41,
+              "detachFromLayout": true,
+              "widgetId": "vmorzie6eq",
+              "canOutsideClickClose": true,
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "width": 532
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "widgetName": "Form1",
+              "backgroundColor": "white",
+              "rightColumn": 64,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "widgetId": "m7dvlazbn7",
+              "topRow": 0,
+              "bottomRow": 46,
+              "parentRowSpace": 10,
+              "isVisible": "{{!!Table1.selectedRow.id}}",
+              "type": "FORM_WIDGET",
+              "parentId": "0",
+              "isLoading": false,
+              "shouldScrollContents": true,
+              "parentColumnSpace": 18.8828125,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 40,
+              "dynamicBindingPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "borderRadius": "0px",
+              "children": [
+                {
+                  "labelTextSize": "0.875rem",
+                  "boxShadow": "none",
+                  "widgetName": "Canvas2",
+                  "rightColumn": 528.71875,
+                  "detachFromLayout": true,
+                  "widgetId": "cicukwhp5j",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 450,
+                  "parentRowSpace": 1,
+                  "isVisible": "true",
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "m7dvlazbn7",
+                  "minHeight": 460,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "borderRadius": "0px",
+                  "children": [
+                    {
+                      "resetFormOnClick": false,
+                      "boxShadow": "none",
+                      "widgetName": "update_button",
+                      "onClick": "{{UpdateQuery.run(() => SelectQuery.run(), () => showAlert('Error while updating resource!','error'))}}",
+                      "dynamicPropertyPathList": [],
+                      "buttonColor": "#03B365",
+                      "topRow": 39,
+                      "bottomRow": 43,
+                      "type": "FORM_BUTTON_WIDGET",
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 47,
+                      "dynamicBindingPathList": [],
+                      "text": "Update",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 63,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "4gnygu5jew",
+                      "isVisible": "true",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "disabledWhenInvalid": true,
+                      "borderRadius": "0px",
+                      "buttonVariant": "PRIMARY"
+                    },
+                    {
+                      "resetFormOnClick": true,
+                      "boxShadow": "none",
+                      "widgetName": "reset_update_button",
+                      "onClick": "",
+                      "dynamicPropertyPathList": [],
+                      "buttonColor": "#03B365",
+                      "topRow": 39,
+                      "bottomRow": 43,
+                      "type": "FORM_BUTTON_WIDGET",
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 28,
+                      "dynamicBindingPathList": [],
+                      "text": "Reset",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 46,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "twwgpz5wfu",
+                      "isVisible": "true",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "disabledWhenInvalid": false,
+                      "borderRadius": "0px",
+                      "buttonVariant": "SECONDARY"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "update_col_2",
+                      "topRow": 6,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "type": "INPUT_WIDGET",
+                      "parentColumnSpace": 8.8963623046875,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 19,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "validation": "true",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": true,
+                      "rightColumn": 63,
+                      "widgetId": "in8e51pg3y",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": "true",
+                      "label": "",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "defaultText": "{{Table1.selectedRow.name.toString()}}"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "update_col_3",
+                      "topRow": 13,
+                      "bottomRow": 17,
+                      "parentRowSpace": 10,
+                      "type": "INPUT_WIDGET",
+                      "parentColumnSpace": 8.8963623046875,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 19,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "validation": "true",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": true,
+                      "rightColumn": 63,
+                      "widgetId": "mlhvfasf31",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": "true",
+                      "label": "",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "defaultText": "{{Table1.selectedRow.gender.toString()}}"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "update_col_4",
+                      "topRow": 20,
+                      "bottomRow": 24,
+                      "parentRowSpace": 10,
+                      "type": "INPUT_WIDGET",
+                      "parentColumnSpace": 8.8963623046875,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 19,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "validation": "true",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": true,
+                      "rightColumn": 63,
+                      "widgetId": "0lz9vhcnr0",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": "true",
+                      "label": "",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "defaultText": "{{Table1.selectedRow.email.toString()}}"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "update_col_5",
+                      "topRow": 27,
+                      "bottomRow": 31,
+                      "parentRowSpace": 10,
+                      "type": "INPUT_WIDGET",
+                      "parentColumnSpace": 8.8963623046875,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": true,
+                      "leftColumn": 19,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "inputType": "TEXT",
+                      "isDisabled": false,
+                      "validation": "true",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": true,
+                      "rightColumn": 63,
+                      "widgetId": "m4esf7fww5",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": "true",
+                      "label": "",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "defaultText": "{{Table1.selectedRow.colors.toString()}}"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text9",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 8.8963623046875,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "text": "Update Row: {{Table1.selectedRow.id}}",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 63,
+                      "textAlign": "LEFT",
+                      "widgetId": "4hnz8ktmz5",
+                      "isVisible": "true",
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text17",
+                      "topRow": 6,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 7.15625,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "text": "name:",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 18,
+                      "textAlign": "RIGHT",
+                      "widgetId": "afzzc7q8af",
+                      "isVisible": "true",
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text18",
+                      "topRow": 13,
+                      "bottomRow": 17,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 7.15625,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "text": "gender:",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 18,
+                      "textAlign": "RIGHT",
+                      "widgetId": "xqcsd2e5dj",
+                      "isVisible": "true",
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text19",
+                      "topRow": 20,
+                      "bottomRow": 24,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 7.15625,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "text": "email:",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 18,
+                      "textAlign": "RIGHT",
+                      "widgetId": "l109ilp3vq",
+                      "isVisible": "true",
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text20",
+                      "topRow": 27,
+                      "bottomRow": 31,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 7.15625,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "text": "colors:",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 18,
+                      "textAlign": "RIGHT",
+                      "widgetId": "gqpwf0yng6",
+                      "isVisible": "true",
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "cicukwhp5j",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "Text25",
+              "displayName": "Text",
+              "iconSVG": "/static/media/icon.97c59b52.svg",
+              "topRow": 50,
+              "bottomRow": 54,
+              "parentRowSpace": 10,
+              "type": "TEXT_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 12.5625,
+              "dynamicTriggerPathList": [],
+              "overflow": "NONE",
+              "fontFamily": "System Default",
+              "leftColumn": 43,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                }
+              ],
+              "truncateButtonColor": "#FFC13D",
+              "text": "{{update_col_3.text.length}}",
+              "key": "nqy3vdhru2",
+              "labelTextSize": "0.875rem",
+              "rightColumn": 59,
+              "textAlign": "LEFT",
+              "widgetId": "ns82fgzdot",
+              "isVisible": true,
+              "fontStyle": "BOLD",
+              "textColor": "#231F20",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0px",
+              "fontSize": "0.875rem"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Issuepage_SelectQuery",
+              "name": "SelectQuery",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "(Table1.pageNo - 1) * Table1.pageSize",
+                "Table1.searchText || \"\"",
+                "col_select.selectedOptionValue",
+                "Table1.pageSize",
+                "order_select.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Issuepage",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "6458e7a8dd41634932a07b60_6458e7a8dd41634932a07b83"
+}

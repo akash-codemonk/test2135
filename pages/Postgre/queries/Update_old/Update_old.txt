@@ -1,0 +1,5 @@
+UPDATE accounts SET
+    username = 'ram'
+   
+  WHERE username = 'Teddy' ;
+	

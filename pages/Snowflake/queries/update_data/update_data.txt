@@ -1,0 +1,1 @@
+UPDATE Public.jan31 SET USERNAME = 'Naruto'where USER_ID=7;

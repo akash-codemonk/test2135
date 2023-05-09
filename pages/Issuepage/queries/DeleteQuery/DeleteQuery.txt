@@ -1,0 +1,2 @@
+DELETE FROM public."chandan_user"
+  WHERE "id" = {{Table1.triggeredRow.id}};

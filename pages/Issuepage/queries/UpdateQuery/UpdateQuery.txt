@@ -1,0 +1,6 @@
+UPDATE public."chandan_user" SET
+		"name" = '{{update_col_2.text}}',
+    "gender" = '{{update_col_3.text}}',
+    "email" = '{{update_col_4.text}}',
+    "colors" = '{{update_col_5.text}}'
+  WHERE "id" = {{Table1.selectedRow.id}};

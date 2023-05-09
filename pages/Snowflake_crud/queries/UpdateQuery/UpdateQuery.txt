@@ -1,0 +1,6 @@
+UPDATE PUBLIC.BBB SET
+		NAME = '{{update_col_2.text}}',
+    LAST_LOGIN = '{{update_col_3.text}}',
+    ADDRESS = '{{update_col_4.text}}',
+    SALARY = '{{update_col_5.text}}'
+  WHERE ID = {{Table1.selectedRow.ID}};

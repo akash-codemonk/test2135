@@ -1,0 +1,4 @@
+UPDATE CC SET
+    Name ='raksha'
+  where Name = 'xxx'; 
+	
